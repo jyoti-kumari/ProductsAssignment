@@ -6,9 +6,11 @@ target 'ProductsAssignment' do
   use_frameworks!
   
   # Pods for ProductsAssignment
+  pod 'PromiseKit'
   
   target 'ProductsAssignmentTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'SnapshotTesting'
   end
 end

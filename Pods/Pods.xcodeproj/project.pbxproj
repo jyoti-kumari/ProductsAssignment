@@ -32,13 +32,13 @@
 		3237D25C9142B419E4F4D0EA2FEE1C15 /* Pods-ProductsAssignmentTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ProductsAssignmentTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		421D9E400D488D1AE571683CA6E4DD98 /* Pods-ProductsAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProductsAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
 		56AD8A6995A45ACE4DE4BE448B8B9E73 /* Pods-ProductsAssignmentTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ProductsAssignmentTests-Info.plist"; sourceTree = "<group>"; };
-		69587B0D82C7F149BD257C737888CB06 /* Pods-ProductsAssignment */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ProductsAssignment"; path = Pods_ProductsAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69587B0D82C7F149BD257C737888CB06 /* Pods_ProductsAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductsAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E5458D8F7915E0D0C6A2591BC7C435 /* Pods-ProductsAssignmentTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ProductsAssignmentTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		76E62E41EF1AA65AC166640FD390DBB2 /* Pods-ProductsAssignment-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ProductsAssignment-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7A87C64CEF67288B64AD51F7D7EF0FF3 /* Pods-ProductsAssignmentTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ProductsAssignmentTests"; path = Pods_ProductsAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98561E612AB4CDC90E46F6B189FF3113 /* Pods-ProductsAssignment-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ProductsAssignment-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B3EFF04B803018DE5D64DFA014DC5059 /* Pods-ProductsAssignmentTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ProductsAssignmentTests.modulemap"; sourceTree = "<group>"; };
 		B4DEAE881E920A0C4FF365B6EF32640D /* Pods-ProductsAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ProductsAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		B89473D92CBA17073E92C18C4546872D /* Pods-ProductsAssignment-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ProductsAssignment-umbrella.h"; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		54B285CC179D6B20A4EA21F8C6EEA6EA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69587B0D82C7F149BD257C737888CB06 /* Pods-ProductsAssignment */,
+				69587B0D82C7F149BD257C737888CB06 /* Pods_ProductsAssignment.framework */,
 				7A87C64CEF67288B64AD51F7D7EF0FF3 /* Pods-ProductsAssignmentTests */,
 			);
 			name = Products;
@@ -200,7 +200,7 @@
 			);
 			name = "Pods-ProductsAssignment";
 			productName = Pods_ProductsAssignment;
-			productReference = 69587B0D82C7F149BD257C737888CB06 /* Pods-ProductsAssignment */;
+			productReference = 69587B0D82C7F149BD257C737888CB06 /* Pods_ProductsAssignment.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
