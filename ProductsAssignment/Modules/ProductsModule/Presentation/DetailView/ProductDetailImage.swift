@@ -6,19 +6,15 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProductDetailImage: View {
     var imageURL: String
     var body: some View {
-        AsyncImage(url: URL(string: imageURL)) { image in
-                image
-                .resizable()
-        } placeholder: {
-            Image("default")
+        WebImage(url: URL(string: imageURL))
             .resizable()
-            .scaledToFill()
-        }
-        .frame(height: 200)
+            .frame(height: 200)
+            
     }
 }
 

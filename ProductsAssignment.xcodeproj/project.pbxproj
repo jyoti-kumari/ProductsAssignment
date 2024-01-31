@@ -47,6 +47,9 @@
 		FD96B0E62B68DD7000FC13AF /* ProductDetailImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B0E52B68DD7000FC13AF /* ProductDetailImageTest.swift */; };
 		FDA5A8C42B6A145700DAE64A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8C32B6A145700DAE64A /* Configuration.swift */; };
 		FDA5A8C82B6A155700DAE64A /* ProductsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8C72B6A155700DAE64A /* ProductsModule.swift */; };
+		FDA5A8CC2B6A7D3F00DAE64A /* AppDIRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8CB2B6A7D3F00DAE64A /* AppDIRegistry.swift */; };
+		FDA5A8CE2B6A7E9800DAE64A /* SecureURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8CD2B6A7E9800DAE64A /* SecureURLSession.swift */; };
+		FDA5A8D02B6A7EB900DAE64A /* SecureSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8CF2B6A7EB900DAE64A /* SecureSessionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,10 @@
 		FD96B0E52B68DD7000FC13AF /* ProductDetailImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailImageTest.swift; sourceTree = "<group>"; };
 		FDA5A8C32B6A145700DAE64A /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		FDA5A8C72B6A155700DAE64A /* ProductsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModule.swift; sourceTree = "<group>"; };
+		FDA5A8CA2B6A7C1400DAE64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FDA5A8CB2B6A7D3F00DAE64A /* AppDIRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIRegistry.swift; sourceTree = "<group>"; };
+		FDA5A8CD2B6A7E9800DAE64A /* SecureURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureURLSession.swift; sourceTree = "<group>"; };
+		FDA5A8CF2B6A7EB900DAE64A /* SecureSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureSessionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +178,9 @@
 		FD96B0662B67BD6800FC13AF /* ProductsAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				FDA5A8CA2B6A7C1400DAE64A /* Info.plist */,
 				FDA5A8C32B6A145700DAE64A /* Configuration.swift */,
+				FDA5A8CB2B6A7D3F00DAE64A /* AppDIRegistry.swift */,
 				FD96B0672B67BD6800FC13AF /* ProductsAssignmentApp.swift */,
 				FDA5A8C52B6A148500DAE64A /* Modules */,
 				FD96B0752B67BED900FC13AF /* Networking */,
@@ -196,6 +205,8 @@
 				FD96B0762B67BEEE00FC13AF /* NetworkRequest.swift */,
 				FD96B0782B67BF0C00FC13AF /* NetworkManager.swift */,
 				FD96B07A2B67BF3E00FC13AF /* URLSessionProtocol.swift */,
+				FDA5A8CD2B6A7E9800DAE64A /* SecureURLSession.swift */,
+				FDA5A8CF2B6A7EB900DAE64A /* SecureSessionDelegate.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -661,6 +672,7 @@
 				FD96B0792B67BF0C00FC13AF /* NetworkManager.swift in Sources */,
 				FD96B0892B67C3DD00FC13AF /* ProductData.swift in Sources */,
 				FD96B0912B67C7B100FC13AF /* FetchProductsUseCase.swift in Sources */,
+				FDA5A8CE2B6A7E9800DAE64A /* SecureURLSession.swift in Sources */,
 				FD96B0952B67CD5B00FC13AF /* ProductsList.swift in Sources */,
 				FD96B06A2B67BD6800FC13AF /* ContentView.swift in Sources */,
 				FD96B0772B67BEEE00FC13AF /* NetworkRequest.swift in Sources */,
@@ -670,9 +682,11 @@
 				FD96B08E2B67C6C600FC13AF /* ProductService.swift in Sources */,
 				FD96B0A22B67CE0400FC13AF /* ProductViewModel.swift in Sources */,
 				FD96B07E2B67BF7500FC13AF /* ProductsConstants.swift in Sources */,
+				FDA5A8D02B6A7EB900DAE64A /* SecureSessionDelegate.swift in Sources */,
 				FDA5A8C42B6A145700DAE64A /* Configuration.swift in Sources */,
 				FD96B0822B67C07400FC13AF /* ProductDTO.swift in Sources */,
 				FD96B0982B67CD7E00FC13AF /* ProductImage.swift in Sources */,
+				FDA5A8CC2B6A7D3F00DAE64A /* AppDIRegistry.swift in Sources */,
 				FDA5A8C82B6A155700DAE64A /* ProductsModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -840,11 +854,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ProductsAssignment/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductsAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -869,11 +885,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ProductsAssignment/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProductsAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

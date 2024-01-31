@@ -7,8 +7,12 @@
 
 import Foundation
 
-class ProductsModule {
-    var networkManager =  NetworkManager()
+final class ProductsModule {
+    private let networkManager: NetworkManager
+    
+    init(networkManager: NetworkManager) {
+        self.networkManager = networkManager
+    }
     
     func createProductsListView() -> ProductViewModel {
         let viewModel = generateViewModel()

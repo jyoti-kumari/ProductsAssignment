@@ -7,6 +7,7 @@ target 'ProductsAssignment' do
   
   # Pods for ProductsAssignment
   pod 'PromiseKit'
+  pod 'SDWebImageSwiftUI'
   
   target 'ProductsAssignmentTests' do
     inherit! :search_paths

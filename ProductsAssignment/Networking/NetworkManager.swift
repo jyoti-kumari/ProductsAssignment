@@ -18,7 +18,7 @@ public final class NetworkManager: ServiceProtocol {
   init(session: URLSessionProtocol = URLSession.shared) {
     self.session = session
   }
-  
+    
   // MARK: - Request func
     func request<T: Decodable>(_ service: RequestProtocol, responseType: T.Type) -> Promise<T> {
         return Promise { seal in

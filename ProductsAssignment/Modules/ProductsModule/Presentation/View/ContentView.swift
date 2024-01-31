@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModelProtocol = ProductsModule().createProductsListView()
-    
+    @StateObject var viewModel = AppDIRegistry().productViewModel
     var body: some View {
         ZStack {
-            ProductsList(products: viewModelProtocol.products)
-            if viewModelProtocol.isLoading {
+            ProductsList(products: viewModel.products)
+            if viewModel.isLoading {
                 ProgressView()
             }
         }
         .onAppear {
-            if viewModelProtocol.products.isEmpty {
+            if viewModel.products.isEmpty {
                 Task {
-                    viewModelProtocol.getProducts()
+                    viewModel.getProducts()
                 }
             }
         }

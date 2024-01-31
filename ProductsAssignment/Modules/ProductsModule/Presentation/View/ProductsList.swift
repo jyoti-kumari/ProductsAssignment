@@ -11,7 +11,7 @@ struct ProductsList: View {
     
     var products: [ProductData]
     var body: some View {
-        NavigationSplitView {
+        NavigationStack {
             List(products, id: \.id) { product in
                 NavigationLink {
                     ProductDetailView(productDetail: product)
@@ -21,9 +21,7 @@ struct ProductsList: View {
             }
             .navigationTitle("Products")
             .navigationBarTitleDisplayMode(.inline)
-        } detail: {
-            Text("Select Product")
-        }
+        } 
     }
 }
 
