@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductsList: View {
     
-    var products: [ProductData]
+    var products: [ProductPresentationData]
     var body: some View {
         NavigationStack {
             List(products, id: \.id) { product in

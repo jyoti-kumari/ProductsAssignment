@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel = AppDIRegistry().productViewModel
+    
     var body: some View {
         ZStack {
             ProductsList(products: viewModel.products)
@@ -22,6 +23,13 @@ struct ContentView: View {
                     viewModel.getProducts()
                 }
             }
+        }
+        .alert(isPresented: $viewModel.showError) {
+              return Alert(title: Text("Error!"),
+                    message: Text(viewModel.errorMessage),
+                    dismissButton: .default(Text("Ok")) {
+                    }
+                )
         }
     }
 }

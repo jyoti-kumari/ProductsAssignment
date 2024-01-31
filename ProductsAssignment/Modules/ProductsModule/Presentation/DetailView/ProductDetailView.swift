@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProductDetailView: View {
     var productDetail
-    : ProductData
+    : ProductPresentationData
     var body: some View {
         ScrollView {
             ProductDetailImage(imageURL: productDetail.thumbnail)

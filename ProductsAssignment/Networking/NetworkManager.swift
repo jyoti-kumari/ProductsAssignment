@@ -12,7 +12,7 @@ protocol ServiceProtocol {
    func request<T: Decodable>(_ request: RequestProtocol, responseType: T.Type) -> Promise<T>
 }
 
-public final class NetworkManager: ServiceProtocol {
+final class NetworkManager: ServiceProtocol {
   private let session: URLSessionProtocol
   
   init(session: URLSessionProtocol = URLSession.shared) {

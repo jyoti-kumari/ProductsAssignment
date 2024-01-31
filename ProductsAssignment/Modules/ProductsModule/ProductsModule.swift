@@ -34,7 +34,7 @@ final class ProductsModule {
         return repository
     }
     
-    private func generateProductService() -> ProductService {
+    private func generateProductService() -> ProductServiceProtocol {
         let service = ProductService(apiService: networkManager)
         return service
     }

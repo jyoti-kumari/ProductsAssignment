@@ -8,17 +8,20 @@
 import Foundation
 
 protocol ProductViewModelProtocol: ObservableObject {
-    func getProducts()
-    var products: [ProductData] { get }
+    var products: [ProductPresentationData] { get }
     var title: String { get }
     var errorMessage: String { get }
+    func getProducts()
 }
 
 class ProductViewModel: ProductViewModelProtocol {
-    @Published var products: [ProductData] = []
+    @Published var products: [ProductPresentationData] = []
+    @Published var isLoading: Bool = false
+    @Published var showError: Bool = false
+    
     var title: String = StringConstant.title
     var errorMessage: String = ""
-    @Published var isLoading: Bool = false
+    
     // MARK: - Dependencies
     
     let fetchProductsUseCaseProtocol: FetchProductsUseCaseProtocol
@@ -39,8 +42,8 @@ class ProductViewModel: ProductViewModelProtocol {
             }
             .catch() { error in
                 self.isLoading = false
+                self.showError = true
                 self.errorMessage = error.localizedDescription
-                print(error.localizedDescription)
             }
     }
 }

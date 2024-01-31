@@ -12,6 +12,7 @@ struct ProductDetailImage: View {
     var imageURL: String
     var body: some View {
         WebImage(url: URL(string: imageURL))
+            .placeholder(Image("default").resizable())
             .resizable()
             .frame(height: 200)
             

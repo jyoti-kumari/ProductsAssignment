@@ -9,7 +9,7 @@ import Foundation
 import PromiseKit
 
 protocol FetchProductsUseCaseProtocol {
-    func execute() -> Promise<[ProductData]>
+    func execute() -> Promise<[ProductPresentationData]>
 }
 
 class FetchProductsUseCase: FetchProductsUseCaseProtocol {
@@ -19,7 +19,15 @@ class FetchProductsUseCase: FetchProductsUseCaseProtocol {
         self.productRepository = productRepository
     }
     
-    func execute() -> Promise<[ProductData]> {
-        return productRepository.getProducts()
+    func execute() -> Promise<[ProductPresentationData]> {
+        return Promise { seal in
+            productRepository.getProducts()
+                .done { response in
+                    seal.fulfill( response.map { $0.toPresentation() })
+                }
+                .catch { error in
+                    seal.reject(error)
+                }
+        }
     }
 }

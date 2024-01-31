@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductRow: View {
-    var product: ProductData
+    var product: ProductPresentationData
     var body: some View {
         HStack {
             ProductImage(imageURL: product.thumbnail)

@@ -7,7 +7,7 @@
 
 final class AppDIRegistry {
     var networkManager: NetworkManager {
-        NetworkManager(session: SecureURLSession.shared)
+        NetworkManager(session: SharedURLSession.shared)
     }
     
     lazy var productViewModel: ProductViewModel = {

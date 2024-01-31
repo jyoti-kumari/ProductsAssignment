@@ -2,50 +2,37 @@
 //  ProductViewModelTests.swift
 //  ProductsAssignmentTests
 //
-//  Created by Jyoti Kumari on 30/01/24.
+//  Created by Jyoti Kumari on 31/01/24.
 //
 
 import XCTest
 import PromiseKit
 @testable import ProductsAssignment
 
-final class ProductViewModelTests: XCTestCase {
+class ProductViewModelTests: XCTestCase {
     
     var viewModel: ProductViewModel!
-    
-    class MockFetchProductsUseCase: FetchProductsUseCaseProtocol {
-        var products: [ProductData]?
-        var error: Error?
-        
-        func execute() -> Promise<[ProductData]> {
-            if let error = error {
-                return Promise(error: error)
-            }
-            let response = products ?? []
-            return Promise.value(response)
-        }
-    }
+    var mockProductUseCase: MockFetchProductsUseCase!
     
     override func setUp() {
-        viewModel = ProductViewModel(fetchProductsUseCaseProtocol: MockFetchProductsUseCase())
+        super.setUp()
+        mockProductUseCase = MockFetchProductsUseCase()
+        viewModel = ProductViewModel(fetchProductsUseCaseProtocol: mockProductUseCase)
     }
-
+    
     override func tearDown() {
         viewModel = nil
+        mockProductUseCase = nil
         super.tearDown()
     }
+    
     // Test fetching products successfully
     func testFetchProductsSuccess() {
         // Given
         let expectation = XCTestExpectation(description: "Fetch products successfully")
         
-        let mockResponse = MockResponseManager.loadMockResponse(ofType: ProductDTO.self, from: "Products")
-        
-        if let useCase = viewModel.fetchProductsUseCaseProtocol as? MockFetchProductsUseCase {
-            useCase.products = ProductMapper.getProduct(dataApiResponse: mockResponse)
-        }
         // When
-        let promise: Promise<[ProductData]> = viewModel.fetchProductsUseCaseProtocol.execute()
+        let promise: Promise<[ProductPresentationData]> = mockProductUseCase.execute()
         
         promise.done { response in
             // Then
@@ -64,11 +51,9 @@ final class ProductViewModelTests: XCTestCase {
         let expectation = XCTestExpectation(description: "Fetch products with error")
         
         let mockError = NSError(domain: "TestErrorDomain", code: 123, userInfo: nil)
-        if let useCase = viewModel.fetchProductsUseCaseProtocol as? MockFetchProductsUseCase {
-            useCase.error = mockError
-        }
+        mockProductUseCase.error = mockError
         // When
-        let promise: Promise<[ProductData]> = viewModel.fetchProductsUseCaseProtocol.execute()
+        let promise: Promise<[ProductPresentationData]> = mockProductUseCase.execute()
         
         promise.done { _ in
             XCTFail("Promise should not fulfill")
@@ -79,9 +64,7 @@ final class ProductViewModelTests: XCTestCase {
         }
         
         wait(for: [expectation], timeout: 1.0)
-
+        
     }
-    
 }
-
 
