@@ -3,17 +3,17 @@
 A simple project that shows different category Products with detail.
 
 
-Dependencies:-
+## Dependencies
 
-1. Xcode version 15.2
+1. Xcode version 15
 2. Run pod install to install the dependencies in the project.
 
-Architecture: -
+## Architecture
 
-1. Clean Acrhitecture for this project (tried to do separation of concerns)
+1. Used clean Acrhitecture
 2. PromiseKit is used for asynchronous tasks
 
-Test cases: -
-1. Application test coverage is 90% above
-2. Attached test coverage screenshot 
-3. Snapshot test cases are tested on iPhone 15 pro, iOS 17.2
+## Test cases
+1. Application test coverage is 90% and above
+2. Snapshot test cases are covered for iPhone 15 pro, iOS 17.2
+3. Xcode version 15.2
