@@ -174,9 +174,6 @@
 				FDA5A8C32B6A145700DAE64A /* Configuration.swift */,
 				FD96B0672B67BD6800FC13AF /* ProductsAssignmentApp.swift */,
 				FDA5A8C52B6A148500DAE64A /* Modules */,
-				FD96B0922B67CD0600FC13AF /* Presentation */,
-				FD96B0862B67C3A800FC13AF /* Domain */,
-				FD96B07F2B67C03F00FC13AF /* Data */,
 				FD96B0752B67BED900FC13AF /* Networking */,
 				FD96B07C2B67BF5700FC13AF /* Constants */,
 				FD96B06B2B67BD6B00FC13AF /* Assets.xcassets */,
@@ -342,9 +339,8 @@
 		FD96B0BF2B68C8D100FC13AF /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FD96B0C02B68C8E400FC13AF /* MockResponseManager.swift */,
+				FDA5A8C92B6A22D600DAE64A /* Mock */,
 				FD96B0C22B68C91900FC13AF /* APIManagerTest.swift */,
-				FD96B0C42B68C93300FC13AF /* MockUrlSession.swift */,
 				FD96B0C62B68C95200FC13AF /* Request.swift */,
 			);
 			path = Network;
@@ -456,8 +452,20 @@
 			isa = PBXGroup;
 			children = (
 				FDA5A8C72B6A155700DAE64A /* ProductsModule.swift */,
+				FD96B0922B67CD0600FC13AF /* Presentation */,
+				FD96B0862B67C3A800FC13AF /* Domain */,
+				FD96B07F2B67C03F00FC13AF /* Data */,
 			);
 			path = ProductsModule;
+			sourceTree = "<group>";
+		};
+		FDA5A8C92B6A22D600DAE64A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				FD96B0C02B68C8E400FC13AF /* MockResponseManager.swift */,
+				FD96B0C42B68C93300FC13AF /* MockUrlSession.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
