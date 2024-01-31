@@ -16,3 +16,4 @@ Architecture: -
 Test cases: -
 1. Application test coverage is 90% above
 2. Attached test coverage screenshot 
+3. Snapshot test cases are tested on iPhone 15 pro, iOS 17.2
