@@ -11,11 +11,9 @@ import PromiseKit
 class ProductService {
     
     private let apiService: ServiceProtocol
-    private let api: APISetUp
     
-    internal init(apiService: ServiceProtocol, api: APISetUp) {
+    internal init(apiService: ServiceProtocol) {
         self.apiService = apiService
-        self.api = api
     }
     
     func getProducts() -> Promise<[ProductData]> {
@@ -33,7 +31,7 @@ class ProductService {
     fileprivate func getRequest() -> BaseRequest {
         let productsRequest = BaseRequest()
         productsRequest.requestQueryParam = "country=in"
-        productsRequest.requestURL = api.productsURL.absoluteString
+        productsRequest.requestURL = Configuration.host
         return productsRequest
     }
 }

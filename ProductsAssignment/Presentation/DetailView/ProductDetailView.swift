@@ -33,5 +33,5 @@ struct ProductDetailView: View {
 }
 
 #Preview {
-    ProductDetailView(productDetail: StringConstant.sampleData)
+    ProductDetailView(productDetail: MockData.mockProduct)
 }

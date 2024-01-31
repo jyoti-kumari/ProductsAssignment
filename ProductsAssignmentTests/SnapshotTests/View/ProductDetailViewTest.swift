@@ -12,7 +12,7 @@ import SwiftUI
 
 final class ProductDetailViewTest: XCTestCase {
     func testProductDetailView() {
-        let productDetailView: ProductDetailView = ProductDetailView(productDetail: StringConstant.sampleData)
+        let productDetailView: ProductDetailView = ProductDetailView(productDetail: MockData.mockProduct)
         assertSnapshots(matching: productDetailView.toViewController(), as: [.image])
     }
 }

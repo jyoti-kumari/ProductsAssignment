@@ -12,7 +12,7 @@ protocol ServiceProtocol {
    func request<T: Decodable>(_ request: RequestProtocol, responseType: T.Type) -> Promise<T>
 }
 
-public final class APIManager: ServiceProtocol {
+public final class NetworkManager: ServiceProtocol {
   private let session: URLSessionProtocol
   
   init(session: URLSessionProtocol = URLSession.shared) {
@@ -23,7 +23,7 @@ public final class APIManager: ServiceProtocol {
     func request<T: Decodable>(_ service: RequestProtocol, responseType: T.Type) -> Promise<T> {
         return Promise { seal in
             guard let url = buildURL(from: service) else {
-                seal.reject(APIError.invalidURL)
+                seal.reject(NetworkError.invalidURL)
                 return
             }
             session.dataTaskWithURL(url) { data, response, error in
@@ -38,21 +38,16 @@ public final class APIManager: ServiceProtocol {
 }
 
 private func buildURL(from service: RequestProtocol) -> URL? {
-    var urlComponents = URLComponents(string: service.requestURL)
-    var query = "apiKey=\(service.apiKey)"
-    if !service.requestQueryParam.isEmpty {
-        query = "\(query)&\(service.requestQueryParam)"
-    }
-    urlComponents?.query = query
+    let urlComponents = URLComponents(string: service.requestURL)
     return urlComponents?.url
 }
 
 // MARK: - Response handlers
 
-extension APIManager {
+extension NetworkManager {
     internal static func handleResponseData<T: Decodable>(_ data: Data?, responseType: T.Type, seal: Resolver<T>) {
         guard let data = data else {
-            seal.reject(APIError.noData)
+            seal.reject(NetworkError.noData)
             return
         }
         do {
@@ -60,7 +55,7 @@ extension APIManager {
             let responseObject = try decoder.decode(T.self, from: data)
             seal.fulfill(responseObject)
         } catch {
-            seal.reject(APIError.decodingError)
+            seal.reject(NetworkError.decodingError)
         }
     }
 }

@@ -23,5 +23,5 @@ struct ProductImage: View {
 }
 
 #Preview {
-    ProductImage(imageURL: StringConstant.sampleData.thumbnail)
+    ProductImage(imageURL: MockData.mockProduct.thumbnail)
 }

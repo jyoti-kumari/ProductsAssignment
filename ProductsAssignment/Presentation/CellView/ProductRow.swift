@@ -27,6 +27,6 @@ struct ProductRow: View {
 #Preview {
     
     Group {
-        ProductRow(product: StringConstant.sampleData)
+        ProductRow(product: MockData.mockProduct)
     }
 }

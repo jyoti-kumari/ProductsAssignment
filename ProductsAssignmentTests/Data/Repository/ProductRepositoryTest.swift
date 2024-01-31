@@ -53,8 +53,8 @@ class ProductRepositoryTest: XCTestCase {
             }
             """.data(using: .utf8)
         
-        let sessionManager = APIManager(session: session)
-        let service = ProductService(apiService: sessionManager, api: .test)
+        let sessionManager = NetworkManager(session: session)
+        let service = ProductService(apiService: sessionManager)
         let productRepo = ProductRepository(apiService: service)
         
         // When
@@ -78,8 +78,8 @@ class ProductRepositoryTest: XCTestCase {
         
         session.error = mockError
         
-        let sessionManager = APIManager(session: session)
-        let service = ProductService(apiService: sessionManager, api: .test)
+        let sessionManager = NetworkManager(session: session)
+        let service = ProductService(apiService: sessionManager)
         let productRepo = ProductRepository(apiService: service)
         
         // When
@@ -102,8 +102,8 @@ class ProductRepositoryTest: XCTestCase {
         
         session.data = nil
         
-        let sessionManager = APIManager(session: session)
-        let service = ProductService(apiService: sessionManager, api: .test)
+        let sessionManager = NetworkManager(session: session)
+        let service = ProductService(apiService: sessionManager)
         let productRepo = ProductRepository(apiService: service)
         
         // When
@@ -114,8 +114,8 @@ class ProductRepositoryTest: XCTestCase {
             XCTFail("Promise should not fulfill")
         }.catch { error in
             // Then
-            XCTAssertTrue(error is APIError)
-            XCTAssertEqual(error as? APIError, APIError.noData)
+            XCTAssertTrue(error is NetworkError)
+            XCTAssertEqual(error as? NetworkError, NetworkError.noData)
             expectation.fulfill()
         }
         

@@ -22,7 +22,7 @@ class FetchProductsUseCaseTests: XCTestCase {
             if let productApiResponse = apiResponse {
                 return Promise.value(productApiResponse)
             }
-            return Promise(error: APIError.noData) // Default to no data
+            return Promise(error: NetworkError.noData) // Default to no data
         }
     }
     
@@ -100,8 +100,8 @@ class FetchProductsUseCaseTests: XCTestCase {
             XCTFail("Promise should not fulfill")
         }.catch { error in
             // Then
-            XCTAssertTrue(error is APIError)
-            XCTAssertEqual(error as? APIError, APIError.noData)
+            XCTAssertTrue(error is NetworkError)
+            XCTAssertEqual(error as? NetworkError, NetworkError.noData)
             expectation.fulfill()
         }
         

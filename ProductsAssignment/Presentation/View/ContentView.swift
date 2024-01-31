@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModelProtocol = ViewSetupFactory.createProductsListView()
+    @StateObject var viewModelProtocol = ProductsModule().createProductsListView()
     
     var body: some View {
         ZStack {

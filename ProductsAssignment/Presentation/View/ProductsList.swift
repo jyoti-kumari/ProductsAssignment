@@ -28,5 +28,5 @@ struct ProductsList: View {
 }
 
 #Preview {
-    ProductsList(products: [StringConstant.sampleData])
+    ProductsList(products: [MockData.mockProduct])
 }

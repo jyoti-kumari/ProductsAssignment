@@ -53,8 +53,8 @@ class ProductServiceTest: XCTestCase {
             }
             """.data(using: .utf8)
         
-        let sessionManager = APIManager(session: session)
-        let service = ProductService(apiService: sessionManager, api: .test)
+        let sessionManager = NetworkManager(session: session)
+        let service = ProductService(apiService: sessionManager)
         
         // When
         let expectation = XCTestExpectation(description: "API request")
@@ -77,8 +77,8 @@ class ProductServiceTest: XCTestCase {
         
         session.error = mockError
         
-        let sessionManager = APIManager(session: session)
-        let service = ProductService(apiService: sessionManager, api: .test)
+        let sessionManager = NetworkManager(session: session)
+        let service = ProductService(apiService: sessionManager)
         
         // When
         let expectation = XCTestExpectation(description: "API request")
@@ -100,8 +100,8 @@ class ProductServiceTest: XCTestCase {
         
         session.data = nil
         
-        let sessionManager = APIManager(session: session)
-        let service = ProductService(apiService: sessionManager, api: .test)
+        let sessionManager = NetworkManager(session: session)
+        let service = ProductService(apiService: sessionManager)
         
         // When
         let expectation = XCTestExpectation(description: "API request with no data")
@@ -111,19 +111,12 @@ class ProductServiceTest: XCTestCase {
             XCTFail("Promise should not fulfill")
         }.catch { error in
             // Then
-            XCTAssertTrue(error is APIError)
-            XCTAssertEqual(error as? APIError, APIError.noData)
+            XCTAssertTrue(error is NetworkError)
+            XCTAssertEqual(error as? NetworkError, NetworkError.noData)
             expectation.fulfill()
         }
         
         wait(for: [expectation], timeout: 1.0)
     }
 }
-
-extension APISetUp {
-    static var test: Self {
-        APISetUp(environment: ProductEnvironment())
-    }
-}
-
 

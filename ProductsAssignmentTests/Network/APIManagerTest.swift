@@ -33,7 +33,7 @@ class APIManagerTest: XCTestCase {
             }
             """.data(using: .utf8)
         
-        let sessionManager = APIManager(session: session)
+        let sessionManager = NetworkManager(session: session)
         
         let request = MockRequest()
         
@@ -59,7 +59,7 @@ class APIManagerTest: XCTestCase {
         
         session.error = mockError
         
-        let sessionManager = APIManager(session: session)
+        let sessionManager = NetworkManager(session: session)
         let request = MockRequest()
         
         // When
@@ -82,7 +82,7 @@ class APIManagerTest: XCTestCase {
         
         session.data = nil
         
-        let sessionManager = APIManager(session: session)
+        let sessionManager = NetworkManager(session: session)
         let request = MockRequest()
         
         // When
@@ -93,8 +93,8 @@ class APIManagerTest: XCTestCase {
             XCTFail("Promise should not fulfill")
         }.catch { error in
             // Then
-            XCTAssertTrue(error is APIError)
-            XCTAssertEqual(error as? APIError, APIError.noData)
+            XCTAssertTrue(error is NetworkError)
+            XCTAssertEqual(error as? NetworkError, NetworkError.noData)
             expectation.fulfill()
         }
         
@@ -111,7 +111,7 @@ class APIManagerTest: XCTestCase {
         
         session.data = mockData
         
-        let sessionManager = APIManager(session: session)
+        let sessionManager = NetworkManager(session: session)
         let request = MockRequest()
         
         // When
@@ -122,8 +122,8 @@ class APIManagerTest: XCTestCase {
             XCTFail("Promise should not fulfill")
         }.catch { error in
             // Then
-            XCTAssertTrue(error is APIError)
-            XCTAssertEqual(error as? APIError, APIError.decodingError)
+            XCTAssertTrue(error is NetworkError)
+            XCTAssertEqual(error as? NetworkError, NetworkError.decodingError)
             expectation.fulfill()
         }
         
