@@ -27,7 +27,6 @@
 		FD96B0982B67CD7E00FC13AF /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B0972B67CD7E00FC13AF /* ProductImage.swift */; };
 		FD96B09A2B67CDA100FC13AF /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B0992B67CDA100FC13AF /* ProductRow.swift */; };
 		FD96B09D2B67CDC800FC13AF /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B09C2B67CDC800FC13AF /* ProductDetailView.swift */; };
-		FD96B09F2B67CDE000FC13AF /* ProductDetailImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B09E2B67CDE000FC13AF /* ProductDetailImage.swift */; };
 		FD96B0A22B67CE0400FC13AF /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B0A12B67CE0400FC13AF /* ProductViewModel.swift */; };
 		FD96B0BE2B68C89C00FC13AF /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = FD96B0BD2B68C89C00FC13AF /* Products.json */; };
 		FD96B0C32B68C91900FC13AF /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B0C22B68C91900FC13AF /* NetworkManagerTest.swift */; };
@@ -38,7 +37,6 @@
 		FD96B0DF2B68DC7500FC13AF /* ProductsListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B0DE2B68DC7500FC13AF /* ProductsListTest.swift */; };
 		FD96B0E22B68DCF100FC13AF /* ProductRowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B0E12B68DCF100FC13AF /* ProductRowTest.swift */; };
 		FD96B0E42B68DD6000FC13AF /* ProductImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B0E32B68DD6000FC13AF /* ProductImageTest.swift */; };
-		FD96B0E62B68DD7000FC13AF /* ProductDetailImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD96B0E52B68DD7000FC13AF /* ProductDetailImageTest.swift */; };
 		FDA5A8C42B6A145700DAE64A /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8C32B6A145700DAE64A /* Configuration.swift */; };
 		FDA5A8C82B6A155700DAE64A /* ProductsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8C72B6A155700DAE64A /* ProductsModule.swift */; };
 		FDA5A8CC2B6A7D3F00DAE64A /* AppDIRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8CB2B6A7D3F00DAE64A /* AppDIRegistry.swift */; };
@@ -92,7 +90,6 @@
 		FD96B0972B67CD7E00FC13AF /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		FD96B0992B67CDA100FC13AF /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		FD96B09C2B67CDC800FC13AF /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
-		FD96B09E2B67CDE000FC13AF /* ProductDetailImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailImage.swift; sourceTree = "<group>"; };
 		FD96B0A12B67CE0400FC13AF /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		FD96B0B32B68C6E100FC13AF /* ProductsAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductsAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD96B0BD2B68C89C00FC13AF /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
@@ -104,7 +101,6 @@
 		FD96B0DE2B68DC7500FC13AF /* ProductsListTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListTest.swift; sourceTree = "<group>"; };
 		FD96B0E12B68DCF100FC13AF /* ProductRowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRowTest.swift; sourceTree = "<group>"; };
 		FD96B0E32B68DD6000FC13AF /* ProductImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageTest.swift; sourceTree = "<group>"; };
-		FD96B0E52B68DD7000FC13AF /* ProductDetailImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailImageTest.swift; sourceTree = "<group>"; };
 		FDA5A8C32B6A145700DAE64A /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		FDA5A8C72B6A155700DAE64A /* ProductsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModule.swift; sourceTree = "<group>"; };
 		FDA5A8CA2B6A7C1400DAE64A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -321,7 +317,6 @@
 			isa = PBXGroup;
 			children = (
 				FD96B09C2B67CDC800FC13AF /* ProductDetailView.swift */,
-				FD96B09E2B67CDE000FC13AF /* ProductDetailImage.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -386,7 +381,6 @@
 			children = (
 				FD96B0E12B68DCF100FC13AF /* ProductRowTest.swift */,
 				FD96B0E32B68DD6000FC13AF /* ProductImageTest.swift */,
-				FD96B0E52B68DD7000FC13AF /* ProductDetailImageTest.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -650,7 +644,6 @@
 				FD96B0772B67BEEE00FC13AF /* NetworkRequest.swift in Sources */,
 				FD96B0842B67C09500FC13AF /* ProductMapper.swift in Sources */,
 				FD96B0682B67BD6800FC13AF /* ProductsAssignmentApp.swift in Sources */,
-				FD96B09F2B67CDE000FC13AF /* ProductDetailImage.swift in Sources */,
 				FD96B08E2B67C6C600FC13AF /* ProductService.swift in Sources */,
 				FDA5A8D32B6A971300DAE64A /* ProductPresentationData.swift in Sources */,
 				FD96B0A22B67CE0400FC13AF /* ProductViewModel.swift in Sources */,
@@ -674,7 +667,6 @@
 				FDA5A8E52B6AB7BE00DAE64A /* ProductRepositoryTests.swift in Sources */,
 				FD96B0DB2B68DBA800FC13AF /* ProductDetailViewTest.swift in Sources */,
 				FDA5A8D82B6A9B7600DAE64A /* MockTestData.swift in Sources */,
-				FD96B0E62B68DD7000FC13AF /* ProductDetailImageTest.swift in Sources */,
 				FDA5A8E32B6AB40600DAE64A /* MockNetworkManager.swift in Sources */,
 				FD96B0DD2B68DC3E00FC13AF /* SwiftUIViewExtension.swift in Sources */,
 				FD96B0E42B68DD6000FC13AF /* ProductImageTest.swift in Sources */,

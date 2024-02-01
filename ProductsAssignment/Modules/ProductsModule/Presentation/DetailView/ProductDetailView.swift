@@ -12,7 +12,8 @@ struct ProductDetailView: View {
     : ProductPresentationData
     var body: some View {
         ScrollView {
-            ProductDetailImage(imageURL: productDetail.thumbnail)
+            ProductImage(imageURL: productDetail.thumbnail)
+            .frame(height: 200)
             VStack(alignment: .leading) {
                 Text(productDetail.title)
                     .font(.title)

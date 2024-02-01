@@ -12,6 +12,8 @@ struct ProductRow: View {
     var body: some View {
         HStack {
             ProductImage(imageURL: product.thumbnail)
+            .frame(width: 50, height: 50)
+            
             VStack(alignment: .leading) {
                 Text(product.title)
                     .font(.headline)
@@ -19,7 +21,6 @@ struct ProductRow: View {
                     .font(.subheadline)
                     .foregroundColor(.gray)
             }
-            Spacer()
         }
     }
 }

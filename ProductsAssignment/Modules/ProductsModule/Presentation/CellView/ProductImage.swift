@@ -12,10 +12,11 @@ struct ProductImage: View {
     var imageURL: String
     var body: some View {
         WebImage(url: URL(string: imageURL))
-            .placeholder(Image("default").resizable())
             .resizable()
-            .frame(width: 50, height: 50)
-            .aspectRatio(contentMode: .fill)
+            .placeholder(Image("default"))
+            .indicator(.activity)
+            .transition(.fade(duration: 0.5))
+            .scaledToFit()
     }
 }
 
