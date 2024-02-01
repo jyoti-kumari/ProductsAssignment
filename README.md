@@ -5,7 +5,7 @@ A simple project that shows different category Products with detail.
 
 ## Dependencies
 
-1. Xcode version 15
+1. Xcode version 15.2
 2. Run pod install to install the dependencies in the project.
 
 ## Architecture
