@@ -25,9 +25,9 @@ struct ContentView: View {
             }
         }
         .alert(isPresented: $viewModel.showError) {
-              return Alert(title: Text("Error!"),
+            return Alert(title: Text(StringConstant.alertMessageTitle),
                     message: Text(viewModel.errorMessage),
-                    dismissButton: .default(Text("Ok")) {
+                         dismissButton: .default(Text(StringConstant.alertButtonTitle)) {
                     }
                 )
         }

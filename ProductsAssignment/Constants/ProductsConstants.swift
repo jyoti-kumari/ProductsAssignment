@@ -7,6 +7,8 @@
 
 struct StringConstant {
     static let title: String = "Products"
+    static let alertMessageTitle: String = "Error!"
+    static let alertButtonTitle: String = "Ok"
 }
 
 struct MockData {

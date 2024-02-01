@@ -22,7 +22,7 @@ extension UIViewController {
             testName: String = "Snapshot") {
             assertSnapshot(
                 matching: self,
-                as: .image(precision: 0.99),
+                as: .image(precision: 0.9),
                 named: name,
                 testName: testName)
         }

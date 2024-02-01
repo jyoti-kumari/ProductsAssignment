@@ -33,12 +33,12 @@ final class ImageViewModel: ObservableObject {
 
         SharedURLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil else {
-                print(error ?? "unknown error")
+                print(error ?? NetworkError.unknownError)
                 return
             }
 
             guard let data = data else {
-                print("No data found")
+                print(NetworkError.noData)
                 return
             }
 
