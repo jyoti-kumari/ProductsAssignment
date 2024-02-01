@@ -13,6 +13,7 @@ import SwiftUI
 final class ProductImageTest: XCTestCase {
     func testProductImage() {
         let productImage: ProductImage = ProductImage(imageURL: MockData.mockProduct.thumbnail)
-        assertSnapshots(matching: productImage.toViewController(), as: [.image])
+        let viewController = productImage.toViewController()
+        viewController.performSnapshotTests(named: "ProductImage")
     }
 }

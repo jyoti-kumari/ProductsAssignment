@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SnapshotTesting
 
 extension SwiftUI.View {
     func toViewController() -> UIViewController {
@@ -13,4 +14,16 @@ extension SwiftUI.View {
         viewController.view.frame = UIScreen.main.bounds
         return viewController
     }
+}
+
+extension UIViewController {
+    func performSnapshotTests(
+            named name: String,
+            testName: String = "Snapshot") {
+            assertSnapshot(
+                matching: self,
+                as: .image(precision: 0.99),
+                named: name,
+                testName: testName)
+        }
 }

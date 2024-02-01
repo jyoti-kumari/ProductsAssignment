@@ -8,31 +8,21 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (8.1.1):
     - PromiseKit/CorePromise
-  - SDWebImage (5.18.10):
-    - SDWebImage/Core (= 5.18.10)
-  - SDWebImage/Core (5.18.10)
-  - SDWebImageSwiftUI (2.2.6):
-    - SDWebImage (~> 5.10)
   - SnapshotTesting (1.9.0)
 
 DEPENDENCIES:
   - PromiseKit
-  - SDWebImageSwiftUI
   - SnapshotTesting
 
 SPEC REPOS:
   trunk:
     - PromiseKit
-    - SDWebImage
-    - SDWebImageSwiftUI
     - SnapshotTesting
 
 SPEC CHECKSUMS:
   PromiseKit: d1be44b474e5acfa16adf007a1f49f104e10fead
-  SDWebImage: fc8f2d48bbfd72ef39d70e981bd24a3f3be53fec
-  SDWebImageSwiftUI: 3a8448b76833ed0e954a651be6c6f45faceed29d
   SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
 
-PODFILE CHECKSUM: afddbd1767a9f336184d2c7608e78b12a69299a5
+PODFILE CHECKSUM: 5d309edd380f4670c8687911cff616a060c214ca
 
 COCOAPODS: 1.14.3

@@ -6,17 +6,17 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct ProductImage: View {
-    var imageURL: String
+    @ObservedObject private var imageViewModel: ImageViewModel
+    
+    init(imageURL: String?) {
+        imageViewModel = ImageViewModel(urlString: imageURL)
+    }
+    
     var body: some View {
-        WebImage(url: URL(string: imageURL))
+        Image(uiImage: imageViewModel.image ?? UIImage())
             .resizable()
-            .placeholder(Image("default"))
-            .indicator(.activity)
-            .transition(.fade(duration: 0.5))
-            .scaledToFit()
     }
 }
 
