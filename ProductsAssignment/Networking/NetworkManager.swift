@@ -45,7 +45,7 @@ private func buildURL(from service: RequestProtocol) -> URL? {
 // MARK: - Response handlers
 
 extension NetworkManager {
-    internal static func handleResponseData<T: Decodable>(_ data: Data?, responseType: T.Type, seal: Resolver<T>) {
+    static func handleResponseData<T: Decodable>(_ data: Data?, responseType: T.Type, seal: Resolver<T>) {
         guard let data = data else {
             seal.reject(NetworkError.noData)
             return

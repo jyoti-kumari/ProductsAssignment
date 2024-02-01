@@ -16,7 +16,7 @@ final class ProductRepository: ProductRepositoryProtocol {
     
     private let apiService: ProductServiceProtocol
     
-    internal init(apiService: ProductServiceProtocol) {
+    init(apiService: ProductServiceProtocol) {
         self.apiService = apiService
     }
     

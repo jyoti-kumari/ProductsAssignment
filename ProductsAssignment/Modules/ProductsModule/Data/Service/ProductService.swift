@@ -16,7 +16,7 @@ final class ProductService: ProductServiceProtocol {
     
     private let apiService: ServiceProtocol
     
-    internal init(apiService: ServiceProtocol) {
+    init(apiService: ServiceProtocol) {
         self.apiService = apiService
     }
     
