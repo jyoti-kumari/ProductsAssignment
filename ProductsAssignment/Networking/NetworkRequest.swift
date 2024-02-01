@@ -34,7 +34,7 @@ protocol RequestProtocol {
 
 }
 
-class BaseRequest: RequestProtocol {
+final class BaseRequest: RequestProtocol {
     var httpMethod: HTTPMethod = .get
     var requestURL: String = ""
     var requestParams: [String: Any]?

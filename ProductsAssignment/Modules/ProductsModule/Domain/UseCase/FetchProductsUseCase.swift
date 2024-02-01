@@ -12,7 +12,7 @@ protocol FetchProductsUseCaseProtocol {
     func execute() -> Promise<[ProductPresentationData]>
 }
 
-class FetchProductsUseCase: FetchProductsUseCaseProtocol {
+final class FetchProductsUseCase: FetchProductsUseCaseProtocol {
     private let productRepository: ProductRepositoryProtocol
     
     init(productRepository: ProductRepositoryProtocol) {

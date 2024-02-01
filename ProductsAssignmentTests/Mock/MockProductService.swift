@@ -9,7 +9,7 @@ import XCTest
 import PromiseKit
 @testable import ProductsAssignment
 
-class MockProductService: ProductServiceProtocol {
+final class MockProductService: ProductServiceProtocol {
     
     var response: ProductDTO?
     var error: Error?

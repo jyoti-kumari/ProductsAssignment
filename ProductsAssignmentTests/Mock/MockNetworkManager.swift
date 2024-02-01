@@ -9,7 +9,7 @@ import XCTest
 import PromiseKit
 @testable import ProductsAssignment
 
-class MockNetworkManager: ServiceProtocol {
+final class MockNetworkManager: ServiceProtocol {
     
     var response: Decodable?
     var error: Error?

@@ -14,7 +14,7 @@ protocol ProductViewModelProtocol: ObservableObject {
     func getProducts()
 }
 
-class ProductViewModel: ProductViewModelProtocol {
+final class ProductViewModel: ProductViewModelProtocol {
     @Published var products: [ProductPresentationData] = []
     @Published var isLoading: Bool = false
     @Published var showError: Bool = false
@@ -32,7 +32,8 @@ class ProductViewModel: ProductViewModelProtocol {
         self.fetchProductsUseCaseProtocol = fetchProductsUseCaseProtocol
     }
     
-    // MARK: - Public Methods
+    // MARK: - Get Products Methods
+    
     func getProducts() {
         isLoading = true
         fetchProductsUseCaseProtocol.execute()

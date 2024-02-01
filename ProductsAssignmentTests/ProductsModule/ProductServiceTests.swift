@@ -9,7 +9,7 @@ import XCTest
 import PromiseKit
 @testable import ProductsAssignment
 
-class ProductServiceTests: XCTestCase {
+final class ProductServiceTests: XCTestCase {
 
     var productService: ProductServiceProtocol!
     var mockNetworkManager: MockNetworkManager!

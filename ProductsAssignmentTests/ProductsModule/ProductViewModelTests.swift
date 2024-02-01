@@ -9,7 +9,7 @@ import XCTest
 import PromiseKit
 @testable import ProductsAssignment
 
-class ProductViewModelTests: XCTestCase {
+final class ProductViewModelTests: XCTestCase {
     
     var viewModel: ProductViewModel!
     var mockProductUseCase: MockFetchProductsUseCase!

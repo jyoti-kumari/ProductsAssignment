@@ -12,7 +12,7 @@ protocol ProductRepositoryProtocol {
     func getProducts() -> Promise<[ProductDomainData]>
 }
 
-final internal class ProductRepository: ProductRepositoryProtocol {
+final class ProductRepository: ProductRepositoryProtocol {
     
     private let apiService: ProductServiceProtocol
     

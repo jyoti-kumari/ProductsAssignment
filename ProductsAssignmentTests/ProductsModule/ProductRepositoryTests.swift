@@ -10,7 +10,7 @@ import XCTest
 import PromiseKit
 @testable import ProductsAssignment
 
-class ProductRepositoryTests: XCTestCase {
+final class ProductRepositoryTests: XCTestCase {
     
     var productRepository: ProductRepositoryProtocol!
     var mockProductService: MockProductService!

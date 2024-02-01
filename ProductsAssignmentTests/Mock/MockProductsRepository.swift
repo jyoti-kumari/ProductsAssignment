@@ -9,7 +9,7 @@ import XCTest
 import PromiseKit
 @testable import ProductsAssignment
 
-class MockProductsRepository: ProductRepositoryProtocol {
+final class MockProductsRepository: ProductRepositoryProtocol {
     
     var products: [ProductDomainData]?
     var error: Error?

@@ -7,7 +7,7 @@
 import Foundation
 @testable import ProductsAssignment
 
-class MockTestData {
+final class MockTestData {
     
     static var products: ProductDTO {
         try! JSONDecoder().decode(ProductDTO.self, from: productsData)
