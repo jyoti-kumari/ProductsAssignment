@@ -8,10 +8,6 @@
 import Foundation
 import PromiseKit
 
-protocol ProductRepositoryProtocol {
-    func getProducts() -> Promise<[ProductDomainData]>
-}
-
 final class ProductRepository: ProductRepositoryProtocol {
     
     private let apiService: ProductServiceProtocol

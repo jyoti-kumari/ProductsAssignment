@@ -53,6 +53,7 @@
 		FDA5A8E72B6AB85000DAE64A /* MockProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8E62B6AB85000DAE64A /* MockProductService.swift */; };
 		FDA5A8E92B6ABA3500DAE64A /* ProductViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8E82B6ABA3500DAE64A /* ProductViewModelTests.swift */; };
 		FDA5A8FB2B6BCBC800DAE64A /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8FA2B6BCBC800DAE64A /* ImageViewModel.swift */; };
+		FDA5A8FE2B74B23B00DAE64A /* RepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA5A8FD2B74B23B00DAE64A /* RepositoryInterface.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		FDA5A8E62B6AB85000DAE64A /* MockProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductService.swift; sourceTree = "<group>"; };
 		FDA5A8E82B6ABA3500DAE64A /* ProductViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModelTests.swift; sourceTree = "<group>"; };
 		FDA5A8FA2B6BCBC800DAE64A /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		FDA5A8FD2B74B23B00DAE64A /* RepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInterface.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 		FD96B0862B67C3A800FC13AF /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FDA5A8FC2B74B1E200DAE64A /* RepositoryInterface */,
 				FD96B08F2B67C79100FC13AF /* UseCase */,
 				FD96B0872B67C3BE00FC13AF /* Entities */,
 			);
@@ -464,6 +467,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		FDA5A8FC2B74B1E200DAE64A /* RepositoryInterface */ = {
+			isa = PBXGroup;
+			children = (
+				FDA5A8FD2B74B23B00DAE64A /* RepositoryInterface.swift */,
+			);
+			path = RepositoryInterface;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -653,6 +664,7 @@
 				FD96B07B2B67BF3E00FC13AF /* URLSessionProtocol.swift in Sources */,
 				FD96B09D2B67CDC800FC13AF /* ProductDetailView.swift in Sources */,
 				FD96B08B2B67C65400FC13AF /* ProductRepository.swift in Sources */,
+				FDA5A8FE2B74B23B00DAE64A /* RepositoryInterface.swift in Sources */,
 				FD96B09A2B67CDA100FC13AF /* ProductRow.swift in Sources */,
 				FD96B0792B67BF0C00FC13AF /* NetworkManager.swift in Sources */,
 				FD96B0892B67C3DD00FC13AF /* ProductDomainData.swift in Sources */,
