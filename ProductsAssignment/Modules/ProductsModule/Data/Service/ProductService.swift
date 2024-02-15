@@ -14,9 +14,9 @@ protocol ProductServiceProtocol {
 
 final class ProductService: ProductServiceProtocol {
     
-    private let apiService: ServiceProtocol
+    private let apiService: NetworkProtocol
     
-    init(apiService: ServiceProtocol) {
+    init(apiService: NetworkProtocol) {
         self.apiService = apiService
     }
     

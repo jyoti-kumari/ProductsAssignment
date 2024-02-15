@@ -8,11 +8,11 @@
 import Foundation
 import PromiseKit
 
-protocol ServiceProtocol {
+protocol NetworkProtocol {
    func request<T: Decodable>(_ request: RequestProtocol, responseType: T.Type) -> Promise<T>
 }
 
-final class NetworkManager: ServiceProtocol {
+final class NetworkManager: NetworkProtocol {
   private let session: URLSessionProtocol
   
   init(session: URLSessionProtocol = URLSession.shared) {

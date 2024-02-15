@@ -471,7 +471,6 @@
 			isa = PBXGroup;
 			children = (
 				FDA5A8FF2B76155500DAE64A /* Repositories */,
-				FDA5A8FD2B74B23B00DAE64A /* ProductRepositoryInterface.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -479,6 +478,7 @@
 		FDA5A8FF2B76155500DAE64A /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				FDA5A8FD2B74B23B00DAE64A /* ProductRepositoryInterface.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";

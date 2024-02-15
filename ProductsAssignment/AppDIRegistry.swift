@@ -6,7 +6,7 @@
 //
 
 final class AppDIRegistry {
-    var networkManager: NetworkManager {
+    var networkManager: NetworkProtocol {
         NetworkManager(session: SharedURLSession.shared)
     }
     

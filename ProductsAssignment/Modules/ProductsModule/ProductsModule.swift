@@ -8,9 +8,9 @@
 import Foundation
 
 final class ProductsModule {
-    private let networkManager: NetworkManager
+    private let networkManager: NetworkProtocol
     
-    init(networkManager: NetworkManager) {
+    init(networkManager: NetworkProtocol) {
         self.networkManager = networkManager
     }
     
